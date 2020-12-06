@@ -6,9 +6,10 @@ with open("./input.txt", "r") as file:
 def num_trees(data, right, down):
     i, pos, trees = 0, 0, 0
     while i < len(data) - 1:
+        pos += right
         i += down
         p = data[i].strip()
-        pos += right
+        
         if pos >= len(p) - 1:
             pos = pos - len(p)
          
